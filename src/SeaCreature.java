@@ -28,11 +28,16 @@ public class SeaCreature {
 	public void eat() {
 		System.out.println(name + " is eating krabby patties");
 	}
-
+	public static void main(String[] args) {
+		SeaCreature Fizz = new SeaCreature("Fizz");
+		Fizz.getName();
+		Fizz.eat();
+		Fizz.laugh();
+	}
 	public void laugh() {
 		try {
 			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(
-					"/Users/League/Google Drive/league-sounds/" + this.name + ".wav").toURI().toURL());
+					"/Users/League/Google Drive/league-sounds/" + this.name + "creepy-noise.wav").toURI().toURL());
 			Clip clip = AudioSystem.getClip();
 			clip.open(audioInputStream);
 			clip.start();

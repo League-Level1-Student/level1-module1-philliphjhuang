@@ -70,4 +70,19 @@ public class RaceCar {
 			System.out.println("Your car has moved into position number "+positionInRace+"!");
 		}
 	}
+	public static void main(String[] args) {
+		/* Do the following things without changing the RaceCar class */
+		
+		// 1. Create a RaceCar and place it in 5th position
+		RaceCar tootwo = new RaceCar("tootwo", 5);
+		// 3. Get the RaceCar to print its position in the race.
+		System.out.println(tootwo.getPositionInRace());
+		// 4. Crash the RaceCar
+		tootwo.crash();
+		// 5. If the car is damaged. Bring it in for a pit stop.
+		tootwo.pit();
+		// 6. Help the car move into first place.
+		tootwo.positionInRace = 1;
+		System.out.println(tootwo.overtake());
+	}
 }

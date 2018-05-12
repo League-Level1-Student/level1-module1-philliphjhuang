@@ -6,18 +6,18 @@
 
 public class HarryPotter {
 
-	private boolean cloakOn;
+	private static boolean cloakOn;
 	
-	HarryPotter() {
+	static void HarryPotter() {
 		System.out.println("making Harry Potter...");
 	}
 
-	void castSpell(String spell){
+	static void castSpell(String spell){
 System.out.println("casting spell: " + spell);
 	}
 
-	void makeInvisible(boolean invisible) {
-		this.cloakOn = invisible;
+	static void makeInvisible(boolean invisible) {
+		cloakOn = invisible;
 		
 		if (cloakOn)
 			System.out.println("Harry is invisible");
@@ -25,16 +25,21 @@ System.out.println("casting spell: " + spell);
 			System.out.println("Harry is visible");
 	}
 
-	void spyOnSnape() {
+	static void spyOnSnape() {
 		System.out.println("Harry sees Professor Snape doing nefarious things.");
 	}
 
 	public static void main(String[] args) {
 		// 1. make harry potter
+		HarryPotter();
 		// 2. become invisible
+		makeInvisible(true);
 		// 3. spy on professor snape
+		spyOnSnape();
 		// 4. become visible again
+		makeInvisible(false);
 		// 5. cast a “stupefy” spell
+		castSpell("stupefy");
 	}
 
 }

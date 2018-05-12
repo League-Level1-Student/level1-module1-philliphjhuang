@@ -6,8 +6,8 @@
 
 public class Cat {
 
-	private String name;
-	private int lives = 9;
+	 static String name;
+	private static int lives = 9;
 
 	Cat(String name) {
 		this.name = name;
@@ -24,7 +24,7 @@ public class Cat {
 			System.out.println("my name is " + name);
 	}
 
-	void kill() {
+	 void kill() {
 		lives--;
 		if (lives > 0)
 			System.out.println("nice try, but I still have " + lives + " lives left");
@@ -36,13 +36,13 @@ public class Cat {
 
 	public static void main(String[] args) {
 		/* Do the following things without changing the Cat class */
-
+Cat Phillip = new Cat("Phillip");
 		// 1. Make the Cat meow
-		
+		Phillip.meow();
 		// 2. Get the Cat to print it's name
-
+		Phillip.printName();
 		// 3. Kill the Cat!
-
+		Phillip.kill();
 	}
 }
 
