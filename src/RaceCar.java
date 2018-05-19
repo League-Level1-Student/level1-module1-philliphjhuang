@@ -82,7 +82,7 @@ public class RaceCar {
 		// 5. If the car is damaged. Bring it in for a pit stop.
 		tootwo.pit();
 		// 6. Help the car move into first place.
-		tootwo.positionInRace = 1;
-		System.out.println(tootwo.overtake());
+		tootwo.positionInRace = 2;
+		tootwo.overtake();
 	}
 }
